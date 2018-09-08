@@ -5,7 +5,6 @@ import {
 import Header from './Components/Header';
 import Main from './Components/Main';
 import 'typeface-roboto';
-import './Stylesheets/App.css';
 
 class App extends Component {
     render() {
