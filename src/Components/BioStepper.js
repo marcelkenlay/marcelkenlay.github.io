@@ -38,7 +38,7 @@ function getStepContent(step) {
     case 1:
       return 'I studied at Loreto between 2014 and 2016. Achieving 4 A*s at A Level in Maths, Further Maths, Physics and Computing.';
     case 2:
-      return `In October 2016 I began my Meng Joint Maths and Computing degree at Imperial College London. At the end of
+      return `In October 2016 I began my MEng Joint Maths and Computing degree at Imperial College London. At the end of
               my second year my total grade for the first two years was 69.9%`;
     case 3:
       return `In the summer of 2018 after my second year of university I began working as a software developer for the first time.
