@@ -4,6 +4,7 @@ import { withStyles } from '@material-ui/core/styles';
 import Stepper from '@material-ui/core/Stepper';
 import Step from '@material-ui/core/Step';
 import StepLabel from '@material-ui/core/StepLabel';
+import StepButton from '@material-ui/core/StepButton';
 import StepContent from '@material-ui/core/StepContent';
 import Button from '@material-ui/core/Button';
 import Paper from '@material-ui/core/Paper';
@@ -26,7 +27,8 @@ const styles = theme => ({
 });
 
 function getSteps() {
-  return ['Stretford Grammar School', 'Loreto Sixth Form College', 'MEng Joint Maths & Computing - Imperial College London', 'Intern Software Developer - The Hut Group'];
+  return ['Stretford Grammar School', 'Loreto Sixth Form College', 'MEng Joint Maths & Computing - Imperial College London' , 'Intern Software Developer - The Hut Group',
+  'MEng Joint Maths & Computing - Imperial College London'];
 }
 
 function getStepContent(step) {
@@ -36,13 +38,15 @@ function getStepContent(step) {
     case 1:
       return 'I studied at Loreto between 2014 and 2016. Achieving 4 A*s at A Level in Maths, Further Maths, Physics and Computing.';
     case 2:
-      return `In October 2016 I began my Meng Joint Maths and Computing degree at Imperial College London. I have just finished
-              my second year and my total grade for the first two years is 69.9%`;
+      return `In October 2016 I began my Meng Joint Maths and Computing degree at Imperial College London. At the end of
+              my second year my total grade for the first two years was 69.9%`;
     case 3:
       return `In the summer of 2018 after my second year of university I began working as a software developer for the first time.
               I began an internship at The Hut Group working within a team at their warehouse in Warrington which focused on ensuring
               orders were picked on time, selecting the routes pickers would take and developing a workflow application which guided
               workers through work`;
+    case 4:
+      return `In October 2018 I made the mistake of returning`
     default:
       return 'Unknown step';
   }
@@ -65,6 +69,13 @@ class BioStepper extends React.Component {
     }));
   };
 
+  handleStep = step => () => {
+    this.setState({
+      activeStep: step,
+    });
+  };
+
+
   handleReset = () => {
     this.setState({
       activeStep: 0,
@@ -79,32 +90,17 @@ class BioStepper extends React.Component {
     return (
       <div className={classes.root}>
         <h2> Step through the stages of my education and employment below.</h2>
-        <Stepper activeStep={activeStep} orientation="vertical">
+        <Stepper nonLinear activeStep={activeStep} orientation="vertical">
           {steps.map((label, index) => {
             return (
               <Step key={label}>
-                <StepLabel>{label}</StepLabel>
+                <StepButton
+                  onClick={this.handleStep(index)}
+                  completed={false}>
+                    {label}
+                </StepButton>
                 <StepContent>
                   <Typography>{getStepContent(index)}</Typography>
-                  <div className={classes.actionsContainer}>
-                    <div>
-                      <Button
-                        disabled={activeStep === 0}
-                        onClick={this.handleBack}
-                        className={classes.button}
-                      >
-                        Back
-                      </Button>
-                      <Button
-                        variant="contained"
-                        color="primary"
-                        onClick={this.handleNext}
-                        className={classes.button}
-                      >
-                        {activeStep === steps.length - 1 ? 'Finish' : 'Next'}
-                      </Button>
-                    </div>
-                  </div>
                 </StepContent>
               </Step>
             );
@@ -112,7 +108,7 @@ class BioStepper extends React.Component {
         </Stepper>
         {activeStep === steps.length && (
           <Paper square elevation={0} className={classes.resetContainer}>
-            <Typography>I&quot;m now beginning my 3rd year at Imperial College London, my penultimate year before my masters year.</Typography>
+            <Typography>That&quot;s all so far, I&quot;m now beginning my 3rd year at Imperial College London, my penultimate year before my masters year.</Typography>
             <Button onClick={this.handleReset} className={classes.button}>
               Go Back to the top.
             </Button>
