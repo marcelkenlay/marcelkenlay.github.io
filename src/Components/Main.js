@@ -14,7 +14,7 @@ const Main = () => (
         <Route path='/bio' component={BioStepper}/>
         <Route path='/cv' component={Resume}/>
         <Route path='/projects' component={Projects}/>
-        <Route path='/' component={Bio}/>
+        <Route path='/' component={BioStepper}/>
     </Switch>
   </div>
 )
