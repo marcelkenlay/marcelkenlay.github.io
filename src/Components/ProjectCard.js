@@ -53,23 +53,26 @@ class ProjectCard extends React.Component {
   };
 
   render() {
+    const assets = require('./Files/assets.js')
+
     const { classes } = this.props;
 
     return (
       <Card className={classes.card}>
         <CardHeader
-          title="MatchUps"
-          subheader="Third term of second year"
+          title={this.props.projectInfo.title}
+          subheader={this.props.projectInfo.date}
         />
-        <CardMedia
-          className={classes.media}
-          image={MatchUps}
-          title="MatchUps Chat Screen"
-        />
+        { this.props.projectInfo.image ?
+          <CardMedia
+            className={classes.media}
+            image={assets[this.props.projectInfo.image]}
+            title={this.props.imageDesc}
+          /> : "Project"
+        }
         <CardContent>
           <Typography component="p">
-            Developed with React, GoLang, Pusher, PSql and Jenkins for Continuous
-            integration.
+            {this.props.projectInfo.caption}
           </Typography>
         </CardContent>
         <CardActions className={classes.actions} disableActionSpacing>
@@ -86,17 +89,9 @@ class ProjectCard extends React.Component {
         </CardActions>
         <Collapse in={this.state.expanded} timeout="auto" unmountOnExit>
           <CardContent>
-            <Typography paragraph>
-              The purpose of the application was to help with setting up amateur
-              sport games. Allowing people to build their own team and
-              then we&quot;d use the information they gave on availabilty location and sport
-              to find them a fixture.
-            </Typography>
-            <Typography paragraph>
-              For the front end of our application we used React which allowed us to
-              have easily reusable components across several pages. Pusher was used for
-              real time updating of the chats.
-            </Typography>
+            {this.props.projectInfo.paragraphs.map(
+              paragraph => <Typography paragraph> {paragraph} </Typography>
+            )}
           </CardContent>
         </Collapse>
       </Card>
@@ -105,7 +100,7 @@ class ProjectCard extends React.Component {
 }
 
 ProjectCard.propTypes = {
-  classes: PropTypes.object.isRequired,
+  classes: PropTypes.object.isRequired
 };
 
 export default withStyles(styles)(ProjectCard);

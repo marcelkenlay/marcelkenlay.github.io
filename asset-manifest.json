@@ -1,8 +1,8 @@
 {
   "main.css": "static/css/main.6ae85c46.css",
   "main.css.map": "static/css/main.6ae85c46.css.map",
-  "main.js": "static/js/main.dabcdd74.js",
-  "main.js.map": "static/js/main.dabcdd74.js.map",
+  "main.js": "static/js/main.bb22a2fa.js",
+  "main.js.map": "static/js/main.bb22a2fa.js.map",
   "static/media/MarcelKenlayCv-1.jpg": "static/media/MarcelKenlayCv-1.2c7b783f.jpg",
   "static/media/MarcelKenlayCv-2.jpg": "static/media/MarcelKenlayCv-2.89240e4d.jpg",
   "static/media/MatchUps.jpg": "static/media/MatchUps.bd0d8181.jpg",
@@ -29,5 +29,6 @@
   "static/media/roboto-latin-900.woff": "static/media/roboto-latin-900.8c2ade50.woff",
   "static/media/roboto-latin-900.woff2": "static/media/roboto-latin-900.19b7a0ad.woff2",
   "static/media/roboto-latin-900italic.woff": "static/media/roboto-latin-900italic.bc833e72.woff",
-  "static/media/roboto-latin-900italic.woff2": "static/media/roboto-latin-900italic.7b770d6c.woff2"
+  "static/media/roboto-latin-900italic.woff2": "static/media/roboto-latin-900italic.7b770d6c.woff2",
+  "static/media/tron.png": "static/media/tron.203cd627.png"
 }
