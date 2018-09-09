@@ -3,8 +3,10 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import ProjectCard from './ProjectCard'
+import ProjectCardWithoutImage from './ProjectCardWithoutImage'
 import ProjectsFile from './Files/Projects.json';
 import Grid from '@material-ui/core/Grid';
+import './Stylesheets/Projects.css';
 
 const styles = theme => ({
   root: {
@@ -21,13 +23,18 @@ function AutoGrid(props) {
   const { classes } = props;
 
   return (
-    <div className={classes.root}>
-      <Grid container spacing={24}>
+    <div id="projects-container" className={classes.root}>
+      <Paper elevation={8}>
+      <Grid justify="center" alignItems="center" container spacing={24}>
         {ProjectsFile.projects.map(
           projectInfo =>
-            <Grid item><ProjectCard projectInfo={projectInfo}/></Grid>
+            <Grid elevation={11} item>
+              {projectInfo.image ? <ProjectCard projectInfo={projectInfo}/>
+                                 : <ProjectCardWithoutImage projectInfo={projectInfo}/>}
+            </Grid>
         )}
       </Grid>
+      </Paper>
     </div>
   );
 }

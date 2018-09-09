@@ -9,6 +9,7 @@ import StepContent from '@material-ui/core/StepContent';
 import Button from '@material-ui/core/Button';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
+import './Stylesheets/BioStepper.css';
 
 const styles = theme => ({
   root: {
@@ -39,12 +40,12 @@ function getStepContent(step) {
       return 'I studied at Loreto between 2014 and 2016. Achieving 4 A*s at A Level in Maths, Further Maths, Physics and Computing.';
     case 2:
       return `In October 2016 I began my MEng Joint Maths and Computing degree at Imperial College London. At the end of
-              my second year my total grade for the first two years was 69.9%`;
+              my second year studying my total grade for the first two years was 69.9%`;
     case 3:
       return `In the summer of 2018 after my second year of university I began working as a software developer for the first time.
-              I began an internship at The Hut Group working within a team at their warehouse in Warrington which focused on ensuring
+              I began an internship at The Hut Group working within a team at their warehouse in Warrington. The team focused on ensuring
               orders were picked on time, selecting the routes pickers would take and developing a workflow application which guided
-              workers through work`;
+              workers through work.`;
     case 4:
       return `In October 2018 I made the mistake of returning`
     default:
@@ -54,7 +55,7 @@ function getStepContent(step) {
 
 class BioStepper extends React.Component {
   state = {
-    activeStep: 0,
+    activeStep: 3,
   };
 
   handleNext = () => {
@@ -88,32 +89,36 @@ class BioStepper extends React.Component {
     const { activeStep } = this.state;
 
     return (
-      <div className={classes.root}>
-        <h2> Step through the stages of my education and employment below.</h2>
-        <Stepper nonLinear activeStep={activeStep} orientation="vertical">
-          {steps.map((label, index) => {
-            return (
-              <Step key={label}>
-                <StepButton
-                  onClick={this.handleStep(index)}
-                  completed={false}>
-                    {label}
-                </StepButton>
-                <StepContent>
-                  <Typography>{getStepContent(index)}</Typography>
-                </StepContent>
-              </Step>
-            );
-          })}
-        </Stepper>
-        {activeStep === steps.length && (
-          <Paper square elevation={0} className={classes.resetContainer}>
-            <Typography>That&quot;s all so far, I&quot;m now beginning my 3rd year at Imperial College London, my penultimate year before my masters year.</Typography>
-            <Button onClick={this.handleReset} className={classes.button}>
-              Go Back to the top.
-            </Button>
-          </Paper>
-        )}
+      <div id="stepper-container" className={classes.root}>
+        <Typography variant="headline" gutterBottom align="center">
+          Step through the stages of my education and employment below.
+        </Typography>
+        <Paper elevation={5}>
+          <Stepper nonLinear activeStep={activeStep} orientation="vertical">
+            {steps.map((label, index) => {
+              return (
+                <Step key={label}>
+                  <StepButton
+                    onClick={this.handleStep(index)}
+                    completed={false}>
+                      {label}
+                  </StepButton>
+                  <StepContent>
+                    <Typography align="left">{getStepContent(index)}</Typography>
+                  </StepContent>
+                </Step>
+              );
+            })}
+          </Stepper>
+          {activeStep === steps.length && (
+            <Paper square elevation={0} className={classes.resetContainer}>
+              <Typography>That&quot;s all so far, I&quot;m now beginning my 3rd year at Imperial College London, my penultimate year before my masters year.</Typography>
+              <Button onClick={this.handleReset} className={classes.button}>
+                Go Back to the top.
+              </Button>
+            </Paper>
+          )}
+        </Paper>
       </div>
     );
   }

@@ -11,8 +11,6 @@ import Collapse from '@material-ui/core/Collapse';
 import Avatar from '@material-ui/core/Avatar';
 import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
-import Grid from '@material-ui/core/Grid';
 import red from '@material-ui/core/colors/red';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
@@ -49,7 +47,6 @@ const styles = theme => ({
 class ProjectCard extends React.Component {
   state = { expanded: false };
 
-
   handleExpandClick = () => {
     this.setState(state => ({ expanded: !state.expanded }));
   };
@@ -59,50 +56,21 @@ class ProjectCard extends React.Component {
 
     const { classes } = this.props;
 
-    const noBottomPadding = {
-      paddingBottom: 0,
-      display:"inline"
-    }
-
     return (
       <Card className={classes.card}>
         <CardHeader
           title={this.props.projectInfo.title}
           subheader={this.props.projectInfo.date}
-        /><CardMedia
-          className={classes.media}
-          image={assets[this.props.projectInfo.image]}
-          title={this.props.imageDesc}/>
-        <Grid container alignItems="flex-end">
-        <Grid item xs={10}>
-        <CardContent style={noBottomPadding}>
+        />
+        <CardContent>
           <Typography component="p">
             {this.props.projectInfo.caption}
           </Typography>
-        </CardContent>
-        </Grid>
-        <Grid item>
-        <CardActions className={classes.actions} disableActionSpacing>
-          <IconButton
-            className={classnames(classes.expand, {
-              [classes.expandOpen]: this.state.expanded,
-            })}
-            onClick={this.handleExpandClick}
-            aria-expanded={this.state.expanded}
-            aria-label="Show more"
-          >
-            <ExpandMoreIcon />
-          </IconButton>
-        </CardActions>
-        </Grid>
-        </Grid>
-        <Collapse in={this.state.expanded} timeout="auto" unmountOnExit>
-          <CardContent>
-            {this.props.projectInfo.paragraphs.map(
+          <br/>
+          {this.props.projectInfo.paragraphs.map(
               paragraph => <Typography paragraph> {paragraph} </Typography>
-            )}
-          </CardContent>
-         </Collapse>
+          )}
+        </CardContent>
       </Card>
     );
   }
@@ -113,11 +81,3 @@ ProjectCard.propTypes = {
 };
 
 export default withStyles(styles)(ProjectCard);
-
-  // <Button className={classes.expand} onClick={this.handleExpandClick} variant="outlined" color="primary" className={classes.button}>
-  //    {this.state.expanded ? "Less Info" : "More Info"}
-  //   <ExpandMoreIcon
-  //       className={classnames(classes.expand, {
-  //             [classes.expandOpen]: this.state.expanded,
-  //           })} />
-  // </Button>
