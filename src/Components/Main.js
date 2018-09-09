@@ -1,7 +1,5 @@
 import React from 'react';
-import Bio from './Bio';
 import BioStepper from './BioStepper';
-import Cv from './Cv';
 import Resume from './Resume';
 import Projects from './Projects';
 import {Switch, Route} from 'react-router-dom'

@@ -7,10 +7,7 @@ import './Stylesheets/LinkedInLink.css'
 const styles = theme => ({
   button: {
     margin: theme.spacing.unit,
-  },
-  input: {
-    display: 'none',
-  },
+  }
 });
 
 function LinkedInLink(props) {

@@ -8,6 +8,7 @@ import StepButton from '@material-ui/core/StepButton';
 import StepContent from '@material-ui/core/StepContent';
 import Button from '@material-ui/core/Button';
 import Paper from '@material-ui/core/Paper';
+import Fade from '@material-ui/core/Fade';
 import Typography from '@material-ui/core/Typography';
 import './Stylesheets/BioStepper.css';
 
@@ -89,6 +90,8 @@ class BioStepper extends React.Component {
     const { activeStep } = this.state;
 
     return (
+      <Fade in={true}
+      {...{timeout: 1000 }}>
       <div id="stepper-container" className={classes.root}>
         <Typography variant="headline" gutterBottom align="center">
           Step through the stages of my education and employment below.
@@ -120,6 +123,7 @@ class BioStepper extends React.Component {
           )}
         </Paper>
       </div>
+      </Fade>
     );
   }
 }

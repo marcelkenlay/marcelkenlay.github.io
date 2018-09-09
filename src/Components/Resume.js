@@ -15,12 +15,14 @@ class Cv extends Component {
         <a href="https://docs.google.com/document/d/1z0ca1JK5xDBENg8JhuQaggCEyljsSr6w9pifMzm3oQk/edit?usp=sharing">
           Download latest version here
         </a>
-        <Fade in="true">
+        <Fade in="true"
+        {...{timeout: 1000 }}>
           <Paper>
             <img src={page1} width="100%"/>
           </Paper>
         </Fade>
-        <Fade in="true">
+        <Fade in="true"
+        {...{timeout: 1500 }}>
           <Paper>
             <img src={page2} width="100%"/>
           </Paper>

@@ -6,6 +6,7 @@ import ProjectCard from './ProjectCard'
 import ProjectCardWithoutImage from './ProjectCardWithoutImage'
 import ProjectsFile from './Files/Projects.json';
 import Grid from '@material-ui/core/Grid';
+import Fade from '@material-ui/core/Fade';
 import './Stylesheets/Projects.css';
 
 const styles = theme => ({
@@ -24,6 +25,8 @@ function AutoGrid(props) {
 
   return (
     <div id="projects-container" className={classes.root}>
+    <Fade in={true}
+      {...{timeout: 1000 }}>
       <Paper elevation={8}>
       <Grid justify="center" alignItems="center" container spacing={24}>
         {ProjectsFile.projects.map(
@@ -35,6 +38,7 @@ function AutoGrid(props) {
         )}
       </Grid>
       </Paper>
+    </Fade>
     </div>
   );
 }
