@@ -8,7 +8,7 @@ class Header extends Component {
         return (
             <div id='menupanel'>
             <Typography color="white" variant="display2" gutterBottom>
-                MARCEL KENALY
+                MARCEL KENLAY
             </Typography>
                 <div id="menuwrapper">
                     <table>
