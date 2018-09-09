@@ -21,7 +21,7 @@ class Header extends Component {
                             </Typography></Link></td>
                         <td class="clickable">
                             <Link to="/cv"><Typography color="inherit" variant="button" gutterBottom>
-                              Bio
+                              CV
                             </Typography></Link></td>
                         <td class="clickable">
                             <Link to="/projects"><Typography color="inherit" variant="button" gutterBottom>
