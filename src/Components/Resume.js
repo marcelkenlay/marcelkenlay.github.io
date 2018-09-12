@@ -1,9 +1,6 @@
 import React, {Component} from 'react';
 import './Stylesheets/Cv.css';
 import Paper from '@material-ui/core/Paper';
-import CardMedia from '@material-ui/core/CardMedia';
-import CardActionArea from '@material-ui/core/CardActionArea';
-import Card from '@material-ui/core/Card';
 import page1 from './Files/MarcelKenlayCv-1.jpg';
 import page2 from './Files/MarcelKenlayCv-2.jpg';
 import Fade from '@material-ui/core/Fade';
@@ -18,13 +15,13 @@ class Cv extends Component {
         <Fade in="true"
         {...{timeout: 1000 }}>
           <Paper>
-            <img src={page1} width="100%"/>
+            <img src={page1} alt="Resume page 1" width="100%"/>
           </Paper>
         </Fade>
         <Fade in="true"
         {...{timeout: 1500 }}>
           <Paper>
-            <img src={page2} width="100%"/>
+            <img src={page2} alt="Resume page 2" width="100%"/>
           </Paper>
         </Fade>
       </div>

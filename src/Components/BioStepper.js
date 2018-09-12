@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Stepper from '@material-ui/core/Stepper';
 import Step from '@material-ui/core/Step';
-import StepLabel from '@material-ui/core/StepLabel';
 import StepButton from '@material-ui/core/StepButton';
 import StepContent from '@material-ui/core/StepContent';
 import Button from '@material-ui/core/Button';
@@ -48,7 +47,8 @@ function getStepContent(step) {
               orders were picked on time, selecting the routes pickers would take and developing a workflow application which guided
               workers through work.`;
     case 4:
-      return `In October 2018 I made the mistake of returning`
+      return `In October 2018 I return to Imperial College London to begin the third year of my course. I have two years of my course remaining,
+              expecting to graduate in 2020.`
     default:
       return 'Unknown step';
   }
