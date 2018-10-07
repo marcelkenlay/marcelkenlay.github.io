@@ -45,10 +45,10 @@ function getStepContent(step) {
       return `In the summer of 2018 after my second year of university I began an internship at The Hut Group. I was working within a team at their warehouse in Warrington,
               the focus of the team was ensuring order fulfilment, this was done by selecting the routes pickers would take and developing an application which allows details of a
               warehouse layout to be given and also applications to guide workers within the warehouse through work. This internship gave me a good introduction to practices taken
-              within workplaces with agile development being used with scrum used for the managment of work.`;
+              within workplaces as with agile with the team using scrum to manage work so gave me a good insight into agile development.`;
     case 4:
-      return `In October 2018 I return to Imperial College London to begin the third year of my course. I have two years of my course remaining,
-              expecting to graduate in 2020. I have now chosen my options for the third year with my maths options being methods for data science and statistics,
+      return `In October 2018 I returned to Imperial College London to begin the third year of my course. I have two years of my course remaining,
+              expecting to graduate in 2020. I have now chosen my options for the third year with my maths options being methods for data science and statistics courses,
               while the modules I've chosen from the department of Computing mostly being related to machine learning and AI. In my first term I will also be working
               on my group project which is in collaboration with Goldman Sachs, the task for the project is to develop software which can perform sentiment analysis on data sources.`
     default:
@@ -95,8 +95,8 @@ class BioStepper extends React.Component {
       <Fade in={true}
       {...{timeout: 1000 }}>
       <div id="stepper-container" className={classes.root}>
-        <Typography variant="headline" gutterBottom align="center">
-          Step through the stages of my education and employment below.
+        <Typography gutterBottom align="center">
+          (Click step to expand)
         </Typography>
         <Paper elevation={5}>
           <Stepper nonLinear activeStep={activeStep} orientation="vertical">
