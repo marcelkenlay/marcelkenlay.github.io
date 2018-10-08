@@ -44,8 +44,8 @@ function getStepContent(step) {
     case 3:
       return `In the summer of 2018 after my second year of university I began an internship at The Hut Group. I was working within a team at their warehouse in Warrington,
               the focus of the team was ensuring order fulfilment, this was done by selecting the routes pickers would take and developing an application which allows details of a
-              warehouse layout to be given and also applications to guide workers within the warehouse through work. This internship gave me a good introduction to practices taken
-              within workplaces as with agile with the team using scrum to manage work so gave me a good insight into agile development.`;
+              warehouse layout to be given as well as an app to guide workers within the warehouse through work. This internship gave me a good introduction to practices taken
+              within workplaces with the team using scrum to manage work giving me a good insight into agile development.`;
     case 4:
       return `In October 2018 I returned to Imperial College London to begin the third year of my course. I have two years of my course remaining,
               expecting to graduate in 2020. I have now chosen my options for the third year with my maths options being methods for data science and statistics courses,
