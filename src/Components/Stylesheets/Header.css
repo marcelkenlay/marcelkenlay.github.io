@@ -50,6 +50,10 @@
   border: 0;
 }
 
-#menuwrapper .clickable:hover {
-  text-decoration-color: red;
+#menuwrapper a {
+  border-bottom: 4px solid black;
+}
+
+#menuwrapper a:hover {
+    border-bottom: 4px solid #d9d9f2;
 }
