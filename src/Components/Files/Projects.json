@@ -4,7 +4,7 @@
           "image" : "personalPage",
           "imageDesc" : "Projects page on my personal site",
           "caption" : "Desktop and mobile friendly site developed in React with usage of Material-UI components.",
-          "paragraphs" : ["Following using React within the development of MatchUps and enjoying using it I chose to use it once more in making the site you are on now.",
+          "paragraphs" : ["After enjoying using React.js within the development of MatchUps I chose to use it once more in making the site you are on now.",
                           "In this site I also made use of Material-UI components to ensure that this site easily scales between both desktop and mobile usage."]},
   {"title" : "MatchUps",
     "date" : "3rd term of 2nd year",
