@@ -1,4 +1,12 @@
 { "projects":[
+  {"title" : "Entity Aspect Recognition for Sentiment Analysis",
+    "date" : "1st term of 3rd year",
+    "image" : "entityAspectSentimentAnalysis",
+    "imageDesc" : "Validation of the unsupervised learning model",
+    "caption" : "I developed an unsupervised machine learning model to recognised aspects of named entities.",
+    "paragraphs" : ["In this project we considered a named entity to be proper nouns such as 'Apple' and 'Iphone' while an aspect would be 'shares' or 'screen', i.e. something belonging to the named entity." ,
+                    "I developed a probablistic model which would use data it collected from documents processed to then later be able to recognise what named entity an aspect belongs to in other documents.",
+                    "I also developed a UI which allowed a user to tag entity aspect relations so we continuously validate the performance of the model against these tagged documents. The UI which I also developed in order to analyse results of the validation can be seen in the above image."]},
   {"title" : "Creating my Personal Page",
           "date" : "Personal Project in 2018 Summer",
           "image" : "personalPage",
