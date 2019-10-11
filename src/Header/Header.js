@@ -1,36 +1,15 @@
-import React, {Component} from 'react';
-import './Header.css';
-import {Link} from 'react-router-dom';
-import Typography from '@material-ui/core/Typography';
+import * as React from 'react';
+import {Menu} from "./Menu";
+import {Col, Row, Typography} from "antd";
 
-export class Header extends Component {
-    render() {
-        return (
-            <div id='menupanel'>
-            <Typography color="white" variant="display2" gutterBottom>
-                MARCEL KENLAY
-            </Typography>
-                <div id="menuwrapper">
-                    <table>
-                      <tr>
-                        <td className="clickable">
-                            <Link to="/cv">
-                                <Typography color="inherit" variant="button" gutterBottom>
-                                    CV
-                                </Typography>
-                            </Link>
-                        </td>
-                        <td className="clickable">
-                            <Link to="/projects">
-                                <Typography color="inherit" variant="button" gutterBottom>
-                                    Projects
-                                </Typography>
-                            </Link>
-                        </td>
-                      </tr>
-                    </table>
-                </div>
-            </div>
-        );
-    }
+export function Header(props){
+    return (
+        <Row>
+            <Col md={12} xs={0}>
+                <Typography.Title style={{color: '#fff', fontSize: '32px', padding:'12px'}}>Marcel Kenlay </Typography.Title>
+            </Col>
+            <Col md={12} xs={24} style={{textAlign: 'right'}}>
+                <Menu {...props}/>
+            </Col>
+        </Row>);
 }

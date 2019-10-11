@@ -8,7 +8,7 @@ import Fade from '@material-ui/core/Fade';
 class Cv extends Component {
   render() {
     return (
-      <div id="cv-doc">
+      <div id="cv-doc" style={{padding: '0 5vw', width:'auto', background: 'rgba(220, 220, 220, 0.7)'}}>
         <a href="https://docs.google.com/document/d/1z0ca1JK5xDBENg8JhuQaggCEyljsSr6w9pifMzm3oQk/edit?usp=sharing">
           Download latest version here
         </a>
