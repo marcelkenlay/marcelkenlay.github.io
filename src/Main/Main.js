@@ -1,10 +1,10 @@
 import React from 'react';
 import Resume from '../CV/CV';
-import Projects from '../Projects/Projects';
+import { Projects } from '../Projects/Projects';
 import {Switch, Route} from 'react-router-dom'
 import './Main.css';
 
-const Main = () => (
+export const Main = () => (
   <div id="main-wrapper">
     <Switch>
         <Route path='/cv' component={Resume}/>
@@ -12,6 +12,4 @@ const Main = () => (
         <Route path='/' component={Projects}/>
     </Switch>
   </div>
-)
-
-export default Main;
+);

@@ -3,7 +3,7 @@ import './Header.css';
 import {Link} from 'react-router-dom';
 import Typography from '@material-ui/core/Typography';
 
-class Header extends Component {
+export class Header extends Component {
     render() {
         return (
             <div id='menupanel'>
@@ -13,14 +13,14 @@ class Header extends Component {
                 <div id="menuwrapper">
                     <table>
                       <tr>
-                        <td class="clickable">
+                        <td className="clickable">
                             <Link to="/cv">
                                 <Typography color="inherit" variant="button" gutterBottom>
                                     CV
                                 </Typography>
                             </Link>
                         </td>
-                        <td class="clickable">
+                        <td className="clickable">
                             <Link to="/projects">
                                 <Typography color="inherit" variant="button" gutterBottom>
                                     Projects
@@ -34,5 +34,3 @@ class Header extends Component {
         );
     }
 }
-
-export default Header;

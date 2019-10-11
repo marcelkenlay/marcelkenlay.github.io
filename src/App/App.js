@@ -1,22 +1,21 @@
 import React, {Component} from 'react';
 import {
-    HashRouter
+    BrowserRouter as Router
 } from 'react-router-dom';
-import Header from '../Header/Header';
-import LinkedInLink from '../Main/LinkedInLink';
-import Main from '../Main/Main';
-import 'typeface-roboto';
+import { Header } from '../Header';
+import { LinkedInLink } from '../Footer';
+import { Main } from '../Main';
 
 class App extends Component {
     render() {
       return (
-        <HashRouter>
+        <Router>
           <div class="wrapper">
               <div class="header"><Header/></div>
               <div class="main"><Main/></div>
               <div class="linkedin"><LinkedInLink/></div>
           </div>
-        </HashRouter>
+        </Router>
       );
     }
 }

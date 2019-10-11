@@ -7,12 +7,9 @@
     "@material-ui/icons": "^3.0.1",
     "material-ui-icons": "^1.0.0-beta.36",
     "react": "^16.4.2",
-    "react-bootstrap": "^0.32.3",
     "react-dom": "^16.4.2",
-    "react-pdf": "^3.0.5",
     "react-router-dom": "^4.3.1",
-    "react-scripts": "1.1.5",
-    "typeface-roboto": "^0.0.54"
+    "react-scripts": "1.1.5"
   },
   "scripts": {
     "start": "react-scripts start",
