@@ -2,9 +2,9 @@ import React, {Component} from 'react';
 import {
     HashRouter
 } from 'react-router-dom';
-import Header from './Components/Header';
-import LinkedInLink from './Components/LinkedInLink';
-import Main from './Components/Main';
+import Header from '../Header/Header';
+import LinkedInLink from '../Main/LinkedInLink';
+import Main from '../Main/Main';
 import 'typeface-roboto';
 
 class App extends Component {

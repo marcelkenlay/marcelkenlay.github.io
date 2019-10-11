@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
-import './Stylesheets/Cv.css';
+import './CV.css';
 import Paper from '@material-ui/core/Paper';
-import page1 from './Files/MarcelKenlayCv-1.jpg';
-import page2 from './Files/MarcelKenlayCv-2.jpg';
+import page1 from '../CV/Files/MarcelKenlayCv-1.jpg';
+import page2 from '../CV/Files/MarcelKenlayCv-2.jpg';
 import Fade from '@material-ui/core/Fade';
 
 class Cv extends Component {

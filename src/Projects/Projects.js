@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
+import { withStyles } from '@material-ui/core/styles/index';
+import Paper from '@material-ui/core/Paper/index';
 import ProjectCard from './ProjectCard'
 import ProjectCardWithoutImage from './ProjectCardWithoutImage'
-import ProjectsFile from './Files/Projects.json';
-import Grid from '@material-ui/core/Grid';
-import Fade from '@material-ui/core/Fade';
-import './Stylesheets/Projects.css';
+import ProjectsFile from './Resources/Projects.json';
+import Grid from '@material-ui/core/Grid/index';
+import Fade from '@material-ui/core/Fade/index';
+import './Projects.css';
 
 const styles = theme => ({
   root: {

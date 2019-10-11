@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
-import Button from '@material-ui/core/Button';
-import './Stylesheets/LinkedInLink.css'
+import { withStyles } from '@material-ui/core/styles/index';
+import Button from '@material-ui/core/Button/index';
+import './LinkedInLink.css'
 
 const styles = theme => ({
   button: {

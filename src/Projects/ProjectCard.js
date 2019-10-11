@@ -1,16 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles/index';
 import classnames from 'classnames';
-import Card from '@material-ui/core/Card';
-import CardHeader from '@material-ui/core/CardHeader';
-import CardMedia from '@material-ui/core/CardMedia';
-import CardContent from '@material-ui/core/CardContent';
-import CardActions from '@material-ui/core/CardActions';
-import Collapse from '@material-ui/core/Collapse';
-import IconButton from '@material-ui/core/IconButton';
-import Typography from '@material-ui/core/Typography';
-import Grid from '@material-ui/core/Grid';
+import Card from '@material-ui/core/Card/index';
+import CardHeader from '@material-ui/core/CardHeader/index';
+import CardMedia from '@material-ui/core/CardMedia/index';
+import CardContent from '@material-ui/core/CardContent/index';
+import CardActions from '@material-ui/core/CardActions/index';
+import Collapse from '@material-ui/core/Collapse/index';
+import IconButton from '@material-ui/core/IconButton/index';
+import Typography from '@material-ui/core/Typography/index';
+import Grid from '@material-ui/core/Grid/index';
 import red from '@material-ui/core/colors/red';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
@@ -52,7 +52,7 @@ class ProjectCard extends React.Component {
   };
 
   render() {
-    const assets = require('./Files/assets.js')
+    const assets = require('./Resources/assets.js')
 
     const { classes } = this.props;
 
