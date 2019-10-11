@@ -8,8 +8,7 @@ import Typography from '@material-ui/core/Typography/index';
 
 const styles = theme => ({
   card: {
-    width: '600px',
-    maxWidth: '100%'
+    maxWidth: '600px'
   },
   media: {
     height: 0,
