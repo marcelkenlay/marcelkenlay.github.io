@@ -16,8 +16,8 @@ export function Projects() {
             maxWidth: '100%',
             margin: 'auto',
             alignItems: 'center',
-            background: 'rgba(220, 220, 220, 0.7)'}}>
-              <Typography.Title level={2} underline={true}>
+            background: 'rgba(255, 255, 255, 0.7)'}}>
+              <Typography.Title level={2} style={{ background: 'rgba(0, 0, 0, 0.9)', padding: '12px', color: '#fff' }}>
                   University & Individual Projects
               </Typography.Title>
             {ProjectsFile.projects.map(

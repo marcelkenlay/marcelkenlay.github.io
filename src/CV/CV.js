@@ -15,7 +15,7 @@ class Cv extends Component {
           alignItems: 'center',
           background: 'rgba(220, 220, 220, 0.7)'}}>
         <Button
-            href="https://drive.google.com/file/d/1J9l2kf0hP09dtgKwKhx5eQJtIPU1NC-L/view?usp=sharing"
+            href="https://drive.google.com/file/d/1Gu-vlSnRvdd5AM849EApU04dYQ0WmLW9/view?usp=sharing"
             type="primary"
             size="large"
             shape="round"
