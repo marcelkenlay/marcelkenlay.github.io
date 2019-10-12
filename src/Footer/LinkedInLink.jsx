@@ -1,12 +1,8 @@
 import React from 'react';
-import Button from '@material-ui/core/Button/index';
-import './LinkedInLink.css'
+import {Icon} from "antd";
 
 export function LinkedInLink() {
-    return (
-        <div style={{width: '100%', textAlign: 'center'}}>
-            <Button href="https://www.linkedin.com/in/marcel-kenlay" style={{ background: '#eee' }}>
-                View my LinkedIn page
-            </Button>
-        </div>);
+    return (<a href="https://www.linkedin.com/in/marcel-kenlay" style={{fontSize: "3vh"}}>
+        View my LinkedIn <Icon type="linkedin"/>
+    </a>);
 }

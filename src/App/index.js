@@ -7,13 +7,13 @@ import {withRouter} from 'react-router-dom';
 
 const App = (props) => (
         <Layout style={{background: 'inherit'}}>
-            <Layout.Header>
+            <Layout.Header style={{background: 'rgba(40, 40, 40, 0.9)'}}>
                 <Header onSelect={url => props.history.push(url)} selected={props.location.pathname}/>
             </Layout.Header>
             <Layout.Content>
                 <Main/>
             </Layout.Content>
-            <Layout.Footer>
+            <Layout.Footer style={{background: 'rgba(40, 40, 40, 0.9)', textAlign:'right'}}>
                 <LinkedInLink/>
             </Layout.Footer>
         </Layout>);

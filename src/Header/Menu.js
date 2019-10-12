@@ -12,9 +12,13 @@ export function Menu({selected, onSelect}){
     return (
         <AntdMenu
             mode="horizontal"
-            theme="dark"
             defaultSelectedKeys={[selected]}
-            style={{ lineHeight: '64px' }}
+            style={{
+                lineHeight: '64px',
+                background: 'inherit',
+                borderBottom: 0,
+                color: '#fff',
+            }}
             onSelect={selected => onSelect(selected.key)}
         >
             <AntdMenu.Item key="/cv" style={fontStyle}>

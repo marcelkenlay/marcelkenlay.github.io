@@ -1,28 +1,40 @@
 import React, {Component} from 'react';
-import './CV.css';
-import Paper from '@material-ui/core/Paper';
-import page1 from '../CV/Files/MarcelKenlayCv-1.jpg';
-import page2 from '../CV/Files/MarcelKenlayCv-2.jpg';
+import page1 from './Files/page1.jpg';
+import page2 from './Files/page2.jpg';
 import Fade from '@material-ui/core/Fade';
+import {Button} from "antd";
 
 class Cv extends Component {
   render() {
     return (
-      <div id="cv-doc" style={{padding: '0 3vw', width:'auto', background: 'rgba(220, 220, 220, 0.7)'}}>
-        <a href="https://docs.google.com/document/d/1z0ca1JK5xDBENg8JhuQaggCEyljsSr6w9pifMzm3oQk/edit?usp=sharing">
-          Download latest version here
-        </a>
+      <div style={{
+          padding: '0 3vw',
+          width: '800px',
+          maxWidth: '100%',
+          margin: 'auto',
+          alignItems: 'center',
+          background: 'rgba(220, 220, 220, 0.7)'}}>
+        <Button
+            href="https://drive.google.com/file/d/1J9l2kf0hP09dtgKwKhx5eQJtIPU1NC-L/view?usp=sharing"
+            type="primary"
+            size="large"
+            shape="round"
+            icon="file-pdf"
+            style={{margin:'6px'}}
+        >
+          View CV as a PDF
+        </Button>
         <Fade in="true"
         {...{timeout: 1000 }}>
-          <Paper>
+          <div style={{maxWidth: '800px', margin:"auto", paddingBottom:'12px'}}>
             <img src={page1} alt="Resume page 1" width="100%"/>
-          </Paper>
+          </div>
         </Fade>
         <Fade in="true"
-        {...{timeout: 1500 }}>
-          <Paper>
+        {...{timeout: 2000 }}>
+          <div style={{maxWidth: '800px', margin:"auto", paddingBottom:'12px'}}>
             <img src={page2} alt="Resume page 2" width="100%"/>
-          </Paper>
+          </div>
         </Fade>
       </div>
     );

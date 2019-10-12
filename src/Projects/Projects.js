@@ -1,25 +1,29 @@
 import React from 'react';
-import ProjectCard from './ProjectCard'
-import ProjectCardWithoutImage from './ProjectCardWithoutImage'
+import { ProjectCard } from './ProjectCard'
 import ProjectsFile from './Resources/Projects.json';
-import Grid from '@material-ui/core/Grid/index';
 import Fade from '@material-ui/core/Fade/index';
 import './Projects.css';
+import {Typography} from "antd";
 
 
 export function Projects() {
   return (
     <Fade in={true}
       {...{timeout: 1000 }}>
-      <Grid justify="center" alignItems="center" container spacing={24} style={{margin: '0 3vw', width:'auto', background: 'rgba(220, 220, 220, 0.7)'}}>
-        {ProjectsFile.projects.map(
-          projectInfo =>
-            <Grid elevation={8} item>
-              {projectInfo.image ? <ProjectCard projectInfo={projectInfo}/>
-                                 : <ProjectCardWithoutImage projectInfo={projectInfo}/>}
-            </Grid>
-        )}
-      </Grid>
+        <div style={{
+            padding: '2vh 3vw',
+            width: '800px',
+            maxWidth: '100%',
+            margin: 'auto',
+            alignItems: 'center',
+            background: 'rgba(220, 220, 220, 0.7)'}}>
+              <Typography.Title level={2} underline={true}>
+                  University & Individual Projects
+              </Typography.Title>
+            {ProjectsFile.projects.map(
+                projectInfo => <ProjectCard projectInfo={projectInfo}/>
+            )}
+        </div>
     </Fade>
   );
 };

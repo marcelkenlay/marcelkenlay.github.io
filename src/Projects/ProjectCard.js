@@ -1,120 +1,58 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles/index';
-import classnames from 'classnames';
-import Card from '@material-ui/core/Card/index';
-import CardHeader from '@material-ui/core/CardHeader/index';
-import CardMedia from '@material-ui/core/CardMedia/index';
-import CardContent from '@material-ui/core/CardContent/index';
-import CardActions from '@material-ui/core/CardActions/index';
-import Collapse from '@material-ui/core/Collapse/index';
-import IconButton from '@material-ui/core/IconButton/index';
-import Typography from '@material-ui/core/Typography/index';
-import Grid from '@material-ui/core/Grid/index';
-import red from '@material-ui/core/colors/red';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import {Card, Col, Row, Tag, Typography} from "antd";
 
-const styles = theme => ({
-  card: {
-    maxWidth: 600,
-  },
-  media: {
-    height: 0,
-    paddingTop: '56.25%', // 16:9
-  },
-  actions: {
-    display: 'flex',
-  },
-  expand: {
-    transform: 'rotate(0deg)',
-    transition: theme.transitions.create('transform', {
-      duration: theme.transitions.duration.shortest,
-    }),
-    marginLeft: 'auto',
-    [theme.breakpoints.up('sm')]: {
-      marginRight: -8,
-    },
-  },
-  expandOpen: {
-    transform: 'rotate(180deg)',
-  },
-  avatar: {
-    backgroundColor: red[500],
-  },
-});
+export class ProjectCard extends React.Component {
+      handleExpandClick = () => {
+          this.setState(state => ({ expanded: !state.expanded }));
+      };
 
-class ProjectCard extends React.Component {
-  state = { expanded: false };
+      render() {
+            const assets = require('./Resources/assets.js');
 
-
-  handleExpandClick = () => {
-    this.setState(state => ({ expanded: !state.expanded }));
-  };
-
-  render() {
-    const assets = require('./Resources/assets.js')
-
-    const { classes } = this.props;
-
-    const noBottomPadding = {
-      paddingBottom: 0,
-      display:"inline"
-    }
-
-    return (
-      <Card className={classes.card}>
-        <CardHeader
-          title={this.props.projectInfo.title}
-          subheader={this.props.projectInfo.date}
-        /><CardMedia
-          className={classes.media}
-          image={assets[this.props.projectInfo.image]}
-          title={this.props.imageDesc}/>
-        <Grid container alignItems="flex-end">
-        <Grid item xs={10}>
-        <CardContent style={noBottomPadding}>
-          <Typography component="p">
-            {this.props.projectInfo.caption}
-          </Typography>
-        </CardContent>
-        </Grid>
-        <Grid item>
-        <CardActions className={classes.actions} disableActionSpacing>
-          <IconButton
-            className={classnames(classes.expand, {
-              [classes.expandOpen]: this.state.expanded,
-            })}
-            onClick={this.handleExpandClick}
-            aria-expanded={this.state.expanded}
-            aria-label="Show more"
-          >
-            <ExpandMoreIcon />
-          </IconButton>
-        </CardActions>
-        </Grid>
-        </Grid>
-        <Collapse in={this.state.expanded} timeout="auto" unmountOnExit>
-          <CardContent>
-            {this.props.projectInfo.paragraphs.map(
-              paragraph => <Typography paragraph> {paragraph} </Typography>
-            )}
-          </CardContent>
-         </Collapse>
-      </Card>
-    );
-  }
+            return (
+                <Card
+                    style={{
+                        width: 600,
+                        maxWidth: '100%',
+                        margin: '2vh auto',
+                        background: 'rgba(255, 255, 255, 0.9)'
+                    }}
+                    cover={this.props.projectInfo.image &&
+                        <div style={{alignItems:'centre'}}>
+                                <img
+                                    alt={this.props.projectInfo.imageDesc}
+                                    src={assets[this.props.projectInfo.image]}
+                                    style={{maxWidth: '100%', maxHeight: '350px', width:'auto'}}
+                                />
+                        </div>}
+                >
+                    <Row>
+                        <Typography.Title style={{textAlign: 'left'}} level={3}>
+                            {this.props.projectInfo.title}
+                        </Typography.Title>
+                    </Row>
+                    <Row style={{paddingBottom: '12px'}}>
+                        <Col style={{textAlign: 'left'}} xs={12}>
+                            <Typography.Text type="secondary">
+                                {this.props.projectInfo.date}
+                            </Typography.Text>
+                        </Col>
+                        <Col style={{textAlign: 'right'}} xs={12}>
+                            {this.props.projectInfo.languages.map(
+                                language =>
+                                    <Tag color="blue" key={language} style={{pointer: "inherit"}}>
+                                        {language}
+                                    </Tag>
+                            )}
+                        </Col>
+                    </Row>
+                    {this.props.projectInfo.paragraphs.map(
+                        paragraph =>
+                            <Typography.Paragraph style={{textAlign: 'left'}}>
+                                {paragraph}
+                            </Typography.Paragraph>)
+                    }
+                </Card>
+            )
+      }
 }
-
-ProjectCard.propTypes = {
-  classes: PropTypes.object.isRequired
-};
-
-export default withStyles(styles)(ProjectCard);
-
-  // <Button className={classes.expand} onClick={this.handleExpandClick} variant="outlined" color="primary" className={classes.button}>
-  //    {this.state.expanded ? "Less Info" : "More Info"}
-  //   <ExpandMoreIcon
-  //       className={classnames(classes.expand, {
-  //             [classes.expandOpen]: this.state.expanded,
-  //           })} />
-  // </Button>
