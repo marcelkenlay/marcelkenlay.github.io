@@ -24,7 +24,7 @@
     background-color: rgba(0,0,0,0.75);
     border-bottom: white 2px solid;
     width: 70%;
-    margin: auto;
+    margin: auto auto 12px;
     display: block;
     font-size: 4vmin;
 }

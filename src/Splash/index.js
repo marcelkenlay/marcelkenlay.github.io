@@ -1,7 +1,7 @@
 import React from 'react';
 import {NavLink} from "react-router-dom";
 import './Splash.css';
-import {Col, Row} from "antd";
+import {Col, Icon, Row} from "antd";
 
 export const Splash = () => (
     <div style={{width: "100%", height:'100%', paddingTop: "40vh"}}>
@@ -27,15 +27,20 @@ export const Splash = () => (
             <Row className='row' style={{width: '90%'}}>
             </Row>
             <Row>
-                <Col xs={12}>
+                <Col xs={12} md={10}>
                     <NavLink to="/cv" className='link'>
                         CV
                     </NavLink>
                 </Col>
-                <Col xs={12}>
+                <Col xs={12} md={10}>
                     <NavLink to="/projects" className='link'>
                         Projects
                     </NavLink>
+                </Col>
+                <Col xs={24} md={4}>
+                    <a href="https://www.linkedin.com/in/marcel-kenlay/" className='link'>
+                        <Icon type="linkedin"/>
+                    </a>
                 </Col>
             </Row>
         </div>
