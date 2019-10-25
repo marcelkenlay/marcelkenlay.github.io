@@ -27,17 +27,17 @@ export const Splash = () => (
             <Row className='row' style={{width: '90%'}}>
             </Row>
             <Row>
-                <Col xs={12} md={10}>
+                <Col xs={12} md={8} className='linkHolder'>
                     <NavLink to="/cv" className='link'>
                         CV
                     </NavLink>
                 </Col>
-                <Col xs={12} md={10}>
+                <Col xs={12} md={8} className='linkHolder'>
                     <NavLink to="/projects" className='link'>
                         Projects
                     </NavLink>
                 </Col>
-                <Col xs={24} md={4}>
+                <Col xs={24} md={8} className='linkHolder'>
                     <a href="https://www.linkedin.com/in/marcel-kenlay/" className='link'>
                         <Icon type="linkedin"/>
                     </a>
