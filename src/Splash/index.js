@@ -28,12 +28,12 @@ export const Splash = () => (
             </Row>
             <Row>
                 <Col xs={12} md={8} className='linkHolder'>
-                    <NavLink to="/cv" className='link'>
+                    <NavLink to="cv" className='link'>
                         CV
                     </NavLink>
                 </Col>
                 <Col xs={12} md={8} className='linkHolder'>
-                    <NavLink to="/projects" className='link'>
+                    <NavLink to="projects" className='link'>
                         Projects
                     </NavLink>
                 </Col>

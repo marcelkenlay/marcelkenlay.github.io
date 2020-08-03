@@ -21,10 +21,10 @@ export function Menu({selected, onSelect}){
             }}
             onSelect={selected => onSelect(selected.key)}
         >
-            <AntdMenu.Item key="/cv" style={fontStyle}>
+            <AntdMenu.Item key="#/cv" style={fontStyle}>
                 <Icon type="profile" style={fontStyle}/> CV
             </AntdMenu.Item>
-            <AntdMenu.Item key="/projects" style={fontStyle}>
+            <AntdMenu.Item key="#/projects" style={fontStyle}>
                 <Icon type="project" style={fontStyle}/> Projects
             </AntdMenu.Item>
         </AntdMenu>);
