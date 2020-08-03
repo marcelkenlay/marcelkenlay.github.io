@@ -1,1 +1,0 @@
-Personal page developed in React.js using Material UI component library. 
