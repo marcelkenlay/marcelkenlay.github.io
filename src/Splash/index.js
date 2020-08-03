@@ -18,10 +18,10 @@ export const Splash = () => (
             </Row>
             <Row className='row' style={{width: '90%'}}>
                 <h4>
-                    MEng Joint Maths & Computing 2020 Graduate
+                    Imperial 2020 Graduate | MEng Joint Maths & Computing
                 </h4>
                 <h4>
-                    Imperial College London
+                    Software Engineer @ Bloomberg London
                 </h4>
             </Row>
             <Row className='row' style={{width: '90%'}}>
