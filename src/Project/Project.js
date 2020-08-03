@@ -1,60 +1,37 @@
 import React from 'react';
-import {Card, Col, Row, Tag, Typography} from "antd";
+import { DetailedProjectCard } from './DetailedProjectCard';
+import ProjectsFile from '../Projects/Resources/Projects.json';
+import Fade from '@material-ui/core/Fade/index';
+import {Typography} from "antd";
+import {NavLink} from "react-router-dom";
 
-export class ProjectPage extends React.Component {
-
+export class Project extends React.Component {
     render() {
-        const assets = require('./Resources/assets.js');
-
+        const { projectId } = this.props.match.params;
+        const matchingProjects = ProjectsFile.projects.filter(
+            projectInfo => projectInfo.id === projectId
+        );
         return (
-            <Card
-                style={{
-                    width: 1200,
+            <Fade in={true}
+                  {...{timeout: 1000 }}>
+                <div style={{
+                    padding: '2vh 3vw',
+                    width: '1200px',
                     maxWidth: '100%',
-                    margin: '2vh auto',
-                    background: 'rgba(255, 255, 255, 0.9)'
-                }}
-            >
-                <Row justify="space-between" align="middle" gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
-                    {this.props.projectInfo.image && <Col xs={24} md={8}>
-                        <div style={{alignItems:'centre'}}>
-                            <img
-                                alt={this.props.projectInfo.imageDesc}
-                                src={assets[this.props.projectInfo.image]}
-                                style={{maxWidth: '100%', maxHeight: '350px', width:'auto'}}
-                            />
-                        </div>
-                    </Col>}
-                    <Col xs={24} md={16}>
-                        <Row>
-                            <Typography.Title style={{textAlign: 'left'}} level={3}>
-                                {this.props.projectInfo.title}
-                            </Typography.Title>
-                        </Row>
-                        <Row style={{paddingBottom: '12px'}}>
-                            <Col style={{textAlign: 'left'}} xs={12}>
-                                <Typography.Text type="secondary">
-                                    {this.props.projectInfo.date}
-                                </Typography.Text>
-                            </Col>
-                            <Col style={{textAlign: 'right'}} xs={12}>
-                                {this.props.projectInfo.languages.map(
-                                    language =>
-                                        <Tag color="blue" key={language} style={{pointer: "inherit"}}>
-                                            {language}
-                                        </Tag>
-                                )}
-                            </Col>
-                        </Row>
-                        {this.props.projectInfo.paragraphs.map(
-                            paragraph =>
-                                <Typography.Paragraph style={{textAlign: 'left'}}>
-                                    {paragraph}
-                                </Typography.Paragraph>)
-                        }
-                    </Col>
-                </Row>
-            </Card>
-        )
+                    margin: 'auto',
+                    alignItems: 'center',
+                    background: 'rgba(255, 255, 255, 0.8)'}}>
+                    {matchingProjects.length === 1 ?
+                        <DetailedProjectCard projectInfo={matchingProjects[0]}/> :
+                        <Typography>
+                            Project with ID "{projectId}" could not be found.
+                        </Typography>
+                    }
+                    <NavLink to="/projects" className='projectLink'>
+                        Return to all Projects
+                    </NavLink>
+                </div>
+            </Fade>
+        );
     }
 }
