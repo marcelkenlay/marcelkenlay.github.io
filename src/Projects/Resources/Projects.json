@@ -1,56 +1,58 @@
 { "projects":[
   {
+    "title" : "Logic Based Learning Virtual Assistant",
+    "date" : "2020",
+    "image" : "elbyElvaRecommendations",
+    "imageDesc" : "Validation of the unsupervised learning model",
+    "languages": ["Python", "React", "React Native"],
+    "short_desc": "Within my final year university project I was investigating whether a user's preferences when scheduling events can be learnt using Logic Based Learning. I developed a mobile and web application to enable user's to schedule both personal and group events. The interaction of users with the applications formed the training data.",
+    "paragraphs" : [
+      "Within my final year university project I was investigating whether a user's preferences when scheduling events can be learnt using Logic Based Learning. I developed a mobile and web application to enable user's to schedule both personal and group events. The interaction of users with the applications formed the training data."
+    ]
+  },
+  {
     "title" : "Entity Aspect Recognition for Sentiment Analysis",
     "date" : "Autumn 2018",
     "image" : "entityAspectSentimentAnalysis",
     "imageDesc" : "Validation of the unsupervised learning model",
     "languages": ["Python"],
-    "paragraphs" : ["I developed a machine learning algorithm which would take a collection of documents to then build a probabilistic model of the likelihood of relations between a named entity and an aspect. This model would then be used to process an unseen document to attempt to attribute the sentiment shown towards an aspect to a named entity.",
-                    "In this project we considered a named entity to be proper nouns such as 'Apple' and 'Iphone' while an aspect would be 'shares' or 'screen', i.e. something belonging to the named entity." ,
-                    "I also developed a UI which allowed a user to tag entity aspect relations so we could continuously evaluate the performance of the model against these user-tagged documents. The results of one document is visible in the above screenshot."]},
-  {
-    "title" : "Creating my Personal Page",
-    "image" : "personalPage",
-    "date" : "Summer 2018",
-    "imageDesc" : "Projects page on my personal site",
-    "caption" : "Desktop and mobile friendly site developed in React with usage of Material-UI and Ant.Design components.",
-    "languages": ["React"],
+    "short_desc": "At the beginning of my third year at Imperial, as part of a group of 6 I worked on a project proposed by Goldman Sachs. We looked to make use of entity aspect recognition in order to improve the performance of sentiment analysis tools.",
     "paragraphs" : [
-      "After enjoying using React.js within the development of MatchUps I chose to use it once more in making the site you are on now.",
-      "In this site I also made use of Material-UI and Ant.design components to ensure that this site is easy to use on both desktop and mobile."]},
+      "I developed a machine learning algorithm which would take a collection of documents to then build a probabilistic model of the likelihood of relations between a named entity and an aspect. This model would then be used to process an unseen document to attempt to attribute the sentiment shown towards an aspect to a named entity.",
+      "In this project we considered a named entity to be proper nouns such as 'Apple' and 'Iphone' while an aspect would be 'shares' or 'screen', i.e. something belonging to the named entity.",
+      "I also developed a UI which allowed a user to tag entity aspect relations so we could continuously evaluate the performance of the model against these user-tagged documents. The results of one document is visible in the above screenshot."
+    ]
+  },
   {
     "title" : "MatchUps",
     "date" : "Summer 2018",
     "image" : "matchUpsImage",
     "imageDesc" : "MatchUps Chat Screen",
     "languages": ["Go", "React"],
-    "paragraphs" : [
+    "short_desc": "Towards the end of my second year of Imperial, within groups of 4 we were given the task of developing a web application which made use of realtime communication. We chose to develop a web application to assist in organising amateur sport teams and arranging games against other teams.",
+    "paragraphs": [
       "The purpose of the application was to help with setting up amateur sport games. Allowing people to build their own team and then we'd use the information they gave on availability location and sport to find them a fixture." ,
-      "For the front end of our application we used React which allowed us to have easily reusable components across several pages. Pusher was used for real time updating of the chats."]},
+      "For the front end of our application we used React which allowed us to have easily reusable components across several pages. Pusher was used for real time updating of the chats."
+    ]
+  },
   {
     "title" : "Building an Operating System",
     "date" : "Spring 2018",
     "languages": ["C"],
+    "short_desc" : "A group project I completed during my second year at Imperial College. We implemented most aspects of an operating system including memory management and scheduling.",
     "paragraphs" : [
-      "A group project I completed during my second year at Imperial College. We implemented most aspects of an operating system including memory management and scheduling."]},
+      "A group project I completed during my second year at Imperial College. We implemented most aspects of an operating system including memory management and scheduling."
+    ]
+  },
   {
     "title" : "Building a Compiler",
     "date" : "Autumn 2017",
     "caption" : "Group project at university. Developed in Java making use of Antlr parser.",
     "languages": ["Java"],
+    "short_desc": "A group project I completed during my second year at Imperial College. We built a compiler for a language defined by the university. As an extension for this project we focused on constant propagation and removal of dead code as methods of optimising our compiler.",
     "paragraphs" : [
-        "A group project I completed during my second year at Imperial College. We built a compiler for a language defined by the university. As an extension for this project we focused on constant propagation and removal of dead code as methods of optimising our compiler."]},
-  {
-    "title" : "Tournament Tracker and Result Analysis",
-    "date" : "Summer 2017",
-    "image" : "tournamentTracker",
-    "imageDesc" : "Tournament Tracker Player Performance Summary",
-    "caption" : "Developed with HTML, CSS, Javascript and PHP",
-    "languages": ["PHP", "HTML", "Javascript"],
-    "paragraphs" : [
-      "I chose to develop an application which could take a list of participants and produce fixtures for a tournament as well as the ability to enter results and see a table of these results",
-      "One I has the basic functionality added I then looked into useful summaries of data I could produce, the example image for this is one of them where I give summaries of people against opponents.",
-      "This project was my first attempt at web development, my motivation was to learn about web development and I now use this site to track FIFA tournaments I have with friends."]},
+        "A group project I completed during my second year at Imperial College. We built a compiler for a language defined by the university. As an extension for this project we focused on constant propagation and removal of dead code as methods of optimising our compiler."]
+  },
   {
     "title" : "Tron Artificial Intelligence",
     "image" : "tron",
@@ -58,16 +60,18 @@
     "date" : "Summer 2017",
     "caption" : "This was developed in C as a group of 4 making use of the OpenGL graphics library.",
     "languages": ["C", "OpenGL"],
+    "short_desc": "A group project I completed during my first year at Imperial College. The task was to develop anything in C, my group chose to recreate the classic arcade game Tron. We focused our attention on developing an AI to play the game against.",
     "paragraphs" : [
       "A group project I completed during my first year at Imperial College. The task was to develop anything in C, my group chose to recreate the classic arcade game Tron. We focused our attention on devloping an AI to play the game against.",
-      "We made the AI have different levels of difficulty, altered by how far ahead it would attempt to look.",
-      "Visible in theimage is 64 AI players playing in a map of increased size."]},
+      "We made the AI have different levels of difficulty, altered by how steps ahead it would look when deciding to move.",
+      "Visible in the image is 64 AI players playing in a map of increased size."]},
   {
     "title" : "Building an Assembler and Emulator",
     "date" : "Summer 2017",
     "caption" : "Developed in C",
     "languages": ["C"],
+    "short_desc": "The first of many group project I took part in during my time at Imperial College. Within a group of 4 we produced an emulator and assembler for the ARM assembly language",
     "paragraphs" : [
-      "A group project I completed during my first year at Imperial College. Within a group of 4 we produced an emulator and assembler were for the ARM assembly language"
+      "The first of many group project I took part in during my time at Imperial College. Within a group of 4 we produced an emulator and assembler for the ARM assembly language"
     ]}
 ]}

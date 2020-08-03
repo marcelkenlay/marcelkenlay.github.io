@@ -13,7 +13,7 @@ class Cv extends Component {
           maxWidth: '100%',
           margin: 'auto',
           alignItems: 'center',
-          background: 'rgba(220, 220, 220, 0.7)'}}>
+          background: 'rgba(255, 255, 255, 0.5)'}}>
         <Button
             href="https://drive.google.com/file/d/1Gu-vlSnRvdd5AM849EApU04dYQ0WmLW9/view?usp=sharing"
             type="primary"
