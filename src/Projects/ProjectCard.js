@@ -14,7 +14,7 @@ export class ProjectCard extends React.Component {
                         background: 'rgba(255, 255, 255, 0.9)'
                     }}
                 >
-                    <Row justify="space-between" align="middle" gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
+                    <Row  type="flex" justify="center" align="middle" gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
                         <Col xs={24} md={8}>
                             <div style={{alignItems:'centre'}}>
                                 {this.props.projectInfo.image ? <img
@@ -25,12 +25,12 @@ export class ProjectCard extends React.Component {
                                 <img
                                     alt="Imperial College London Logo"
                                     src={assets["imperial_logo"]}
-                                    style={{width: '80%', maxHeight: '250px', paddingTop: '3vh'}}
+                                    style={{width: '80%', maxHeight: '250px'}}
                                 />}
                             </div>
                         </Col>
                         <Col xs={24} md={16}>
-                            <Row style={{paddingTop: '3vh'}}>
+                            <Row>
                                 <Typography.Title style={{textAlign: 'left'}} level={3}>
                                     {this.props.projectInfo.title}
                                 </Typography.Title>
