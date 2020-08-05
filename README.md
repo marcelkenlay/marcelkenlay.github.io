@@ -1,1 +1,1 @@
-Personal page developed in React.js using Material UI component library. 
+Personal page for Marcel Kenlay, software engineer at Bloomberg and Imperial College London graduate. Developed in React.js using Ant Design component library. 
