@@ -43,6 +43,9 @@ export class DetailedProjectCard extends React.Component {
                                     {paragraph}
                                 </Typography.Paragraph>)
                         }
+                        {this.props.projectInfo.report_link && <Typography.Paragraph style={{textAlign: 'left'}}>
+                            The report for this project can be found <a href={this.props.projectInfo.report_link}>here</a>.
+                        </Typography.Paragraph>}
                     </Col>
                 </Row>
                 <Row  type="flex" justify="center" align="middle" >
@@ -60,7 +63,6 @@ export class DetailedProjectCard extends React.Component {
                                           Image {img_no + 1}: {img.caption}
                                       </Typography.Paragraph>
                                   </div>
-
                               </Col>
                           )
 

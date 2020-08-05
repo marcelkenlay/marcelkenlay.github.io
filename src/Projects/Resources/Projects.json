@@ -13,6 +13,7 @@
       "We combine Logic Based Learning with a Reinforcement Learning approach. Weak constraints found via learning tasks, are sampled based on their score. This score is dependent upon the performance of recommendations which have previously been made using the weak constraint.",
       "A usage simulator was implemented to assess the performance of the Elby Elva application. Answer Set Programming (ASP) is used once more in order to simulate the interaction of multiple virtual users with the Elby Elva system as they schedule solo and group events. Results of the simulations are tracked and presented within a web application showing quantitative and qualitative analysis."
     ],
+    "report_link": "https://drive.google.com/file/d/1ED3wecyg9S2BZak1CeLZnunYdUglRgB7/view?usp=sharing",
     "additional_images": [
       {
         "name": "elbyElvaRecommendations",
